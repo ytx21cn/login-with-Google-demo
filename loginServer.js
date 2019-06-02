@@ -39,7 +39,8 @@ app.use('/', printURL);
 // Will get cookies out of request, decrypt and check if 
 // session is still going on. 
 app.use(cookieSession({
-    maxAge: 6 * 60 * 60 * 1000, // Six hours in milliseconds
+    //maxAge: 6 * 60 * 60 * 1000, // Six hours in milliseconds
+    maxAge: 0, // I would choose to let the cookie expire as soon as the browser is closed
     // meaningless random string used by encryption
     keys: ['hanger waldo mercy dance']  
 }));
